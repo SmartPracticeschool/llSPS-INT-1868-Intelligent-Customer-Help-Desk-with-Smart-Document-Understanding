@@ -1,0 +1,1735 @@
+{
+  "intents": [
+    {
+      "intent": "At_rent",
+      "examples": [
+        {
+          "text": "I want to rent my house"
+        },
+        {
+          "text": "want paying guest"
+        },
+        {
+          "text": "looking for paying guest"
+        },
+        {
+          "text": "rent my house at cost of 10000"
+        },
+        {
+          "text": "rent my flat"
+        },
+        {
+          "text": "I want to give my flat at rent"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Working_hour",
+      "examples": [
+        {
+          "text": "at what time i should come"
+        },
+        {
+          "text": "when you are open"
+        },
+        {
+          "text": "when you are close"
+        },
+        {
+          "text": "working hour"
+        },
+        {
+          "text": "what is working hour"
+        },
+        {
+          "text": "what timing of your office"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "location",
+      "examples": [
+        {
+          "text": "i want near to metro"
+        },
+        {
+          "text": "i want to live in kandivali"
+        },
+        {
+          "text": "i want house at price of 4000000 with 2 bhk at borivali near to station at second floor"
+        },
+        {
+          "text": "i want to buy a flat of 3 bhk at price of 30 lakh near andheri station"
+        },
+        {
+          "text": "close to mahalaxmi"
+        },
+        {
+          "text": "at any place"
+        },
+        {
+          "text": "i would like to have at virar"
+        },
+        {
+          "text": "i want to buy a house at malad"
+        },
+        {
+          "text": "anywhere"
+        },
+        {
+          "text": "Bandra"
+        },
+        {
+          "text": "close to metro"
+        },
+        {
+          "text": "near to railway station"
+        },
+        {
+          "text": "near andheri"
+        },
+        {
+          "text": "mostly in goregaon"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Greeting",
+      "examples": [
+        {
+          "text": "namaste"
+        },
+        {
+          "text": "hii"
+        },
+        {
+          "text": "hey"
+        },
+        {
+          "text": "good evening"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "hello"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "buy",
+      "examples": [
+        {
+          "text": "i want to buy a house"
+        },
+        {
+          "text": "buy a home"
+        },
+        {
+          "text": "want to buy flat"
+        },
+        {
+          "text": "want a house"
+        },
+        {
+          "text": "want flat"
+        },
+        {
+          "text": "i like to have home"
+        },
+        {
+          "text": "i am looking for house"
+        },
+        {
+          "text": "how can i buy flat"
+        },
+        {
+          "text": "get me a flat"
+        },
+        {
+          "text": "get me house"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "rent",
+      "examples": [
+        {
+          "text": "looking for rent house"
+        },
+        {
+          "text": "i want flat in rent"
+        },
+        {
+          "text": "i want house at rent"
+        },
+        {
+          "text": "want flat as paying guest"
+        },
+        {
+          "text": "flat at rent"
+        },
+        {
+          "text": "get me flat at rent"
+        },
+        {
+          "text": "searching for flat at rent"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "reg_faq",
+      "examples": [
+        {
+          "text": "What are the rates of GST applicable on construction of residential apartments"
+        },
+        {
+          "text": "how area is calculated"
+        },
+        {
+          "text": "How my tax is calculated"
+        },
+        {
+          "text": "what is gst"
+        },
+        {
+          "text": "How gst is calculated"
+        },
+        {
+          "text": "Is there any provision for the exemption of the property tax for ex-serviceman"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "sell",
+      "examples": [
+        {
+          "text": "sell my flat"
+        },
+        {
+          "text": "i want to sell house whiich is in andheri"
+        },
+        {
+          "text": "I want to sell my flat"
+        },
+        {
+          "text": "sell my house"
+        },
+        {
+          "text": "I want to sell my house"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "location_office",
+      "examples": [
+        {
+          "text": "how can i talk to you"
+        },
+        {
+          "text": "can we have a talk"
+        },
+        {
+          "text": "i want to meet you"
+        },
+        {
+          "text": "how can i contact you"
+        },
+        {
+          "text": "How can we reach you"
+        },
+        {
+          "text": "how can we get to your office"
+        },
+        {
+          "text": "whats your location"
+        },
+        {
+          "text": "where is your office"
+        },
+        {
+          "text": "How can we get to you"
+        },
+        {
+          "text": "can we meet"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "contact",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "contact",
+          "patterns": [
+            "\\b[A-Za-z0-9._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,}\\b"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "number",
+          "patterns": [
+            "(\\d{10})"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    },
+    {
+      "entity": "location_house",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "goregaon",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "borivali near to station",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "near to metro",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "place",
+          "synonyms": [
+            "at malad",
+            "near to andheri"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "panvel",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "mahalaxmi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "near to railway station",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "metro",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "borivali",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "andheri",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "andheri station",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "malad",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "any",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "virar",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "kandivali",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "floor",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "floor",
+          "synonyms": [
+            "any",
+            "top floor",
+            "mid ",
+            "middle floor",
+            "ground",
+            "ground floor",
+            "3 ",
+            "4",
+            "18",
+            "22",
+            "2nd",
+            "18th"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "https://eu-gb.functions.cloud.ibm.com/api/v1/web/si05202000624%40smartinternz.com_dev/default/fetch%20query.json",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "slot",
+      "parent": "node_5_1591214148476",
+      "variable": "$contact",
+      "dialog_node": "slot_8_1591214576143"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "At which floor you like ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1591213088877",
+      "conditions": "@sys-number",
+      "dialog_node": "node_6_1591213090806",
+      "previous_sibling": "slot_4_1591213130408"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1591213088877",
+      "variable": "$budget",
+      "dialog_node": "slot_4_1591213130408"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry, I didn't get it."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_1_1591214497172",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1591214497204",
+      "previous_sibling": "handler_1_1591214497204"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1591214497172",
+      "context": {
+        "location_house": "@location_house"
+      },
+      "conditions": "@location_house",
+      "event_name": "input",
+      "dialog_node": "handler_1_1591214497204"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many BHK it is ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1591135218152",
+      "conditions": "@sys-number",
+      "dialog_node": "node_3_1591214759791"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1591213094903",
+      "variable": "$floor",
+      "dialog_node": "slot_6_1591213579795",
+      "previous_sibling": "node_9_1591213670354"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Can you provide your Phone no. or Email-id for futher contact ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1591213094903",
+      "conditions": "@location_house",
+      "dialog_node": "node_9_1591213670354"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry, At what cost ?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_7_1591214179045",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1591214179076",
+      "previous_sibling": "handler_6_1591214179076"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1591214179045",
+      "context": {
+        "budget": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_6_1591214179076"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Do you want to talk to agent?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_6_1591906602574",
+      "conditions": "anything_else",
+      "dialog_node": "response_4_1591906897444",
+      "previous_sibling": "response_6_1591906893761"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "\"<?$webhook_result_1.passages[0].passage_text?>\""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1591906602574",
+      "conditions": "$webhook_result_1",
+      "dialog_node": "response_6_1591906893761"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1591214765167",
+      "variable": "$contact",
+      "dialog_node": "slot_10_1591214784189"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "At which floor your flat is ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1591214142338",
+      "conditions": "@sys-number",
+      "dialog_node": "node_2_1591214143185",
+      "previous_sibling": "slot_7_1591214179045"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1591214142338",
+      "variable": "$budget",
+      "dialog_node": "slot_7_1591214179045"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1591212254519",
+      "variable": "$contact",
+      "dialog_node": "slot_1_1591212279409"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1591213672256",
+      "variable": "$contact",
+      "dialog_node": "slot_3_1591213815424"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many BHK it is ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1591134650586",
+      "conditions": "@sys-number",
+      "dialog_node": "node_4_1591214142338"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many BHK do you want ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1590964175870",
+      "conditions": "@sys-number",
+      "dialog_node": "node_1_1591213088877"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1591211353227",
+      "variable": "$budget",
+      "dialog_node": "slot_6_1591211378413",
+      "previous_sibling": "node_2_1591211546531"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "At which floor do you want ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1591211353227",
+      "conditions": "@sys-number",
+      "dialog_node": "node_2_1591211546531"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thanks, we will contact you soon."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1591214146650",
+      "conditions": "@contact",
+      "dialog_node": "node_5_1591214148476",
+      "previous_sibling": "slot_1_1591214497172"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1591214146650",
+      "variable": "$location_house",
+      "dialog_node": "slot_1_1591214497172"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry, I didn't understand ."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_6_1591214292757",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1591214292785",
+      "previous_sibling": "handler_6_1591214292785"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1591214292757",
+      "context": {
+        "bhk": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_6_1591214292785"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Where your flat is ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1591214760820",
+      "conditions": "@floor",
+      "dialog_node": "node_1_1591214761862",
+      "previous_sibling": "slot_3_1591215036445"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1591214760820",
+      "variable": "$bhk",
+      "dialog_node": "slot_3_1591215036445"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry, How many BHK ?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_6_1591211577121",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1591211577146",
+      "previous_sibling": "handler_5_1591211577146"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1591211577121",
+      "context": {
+        "bhk": "@sys-number < 6"
+      },
+      "conditions": "@sys-number < 6",
+      "event_name": "input",
+      "dialog_node": "handler_5_1591211577146"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thanks, we will contact you soon ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1591214762951",
+      "conditions": "@contact",
+      "dialog_node": "node_2_1591214765167",
+      "previous_sibling": "slot_8_1591214886789"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1591214762951",
+      "variable": "$location_house",
+      "dialog_node": "slot_8_1591214886789"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry, At what cost ?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_8_1591215134724",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1591215134753",
+      "previous_sibling": "handler_6_1591215134753"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1591215134724",
+      "context": {
+        "budget": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_6_1591215134753"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry, At which floor ?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_8_1591214405211",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1591214405232",
+      "previous_sibling": "handler_3_1591214405232"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1591214405211",
+      "context": {
+        "floor": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_3_1591214405232"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please provide valid details ."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_8_1591214576143",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1591214576178",
+      "previous_sibling": "handler_2_1591214576178"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1591214576143",
+      "context": {
+        "contact": "@contact"
+      },
+      "conditions": "@contact",
+      "event_name": "input",
+      "dialog_node": "handler_2_1591214576178"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry, At which floor ?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_6_1591213579795",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1591213579835",
+      "previous_sibling": "handler_2_1591213579835"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1591213579795",
+      "context": {
+        "floor": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_2_1591213579835"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1591211720858",
+      "variable": "$floor",
+      "dialog_node": "slot_2_1591211799029",
+      "previous_sibling": "node_4_1591211900074"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Can you provide your phone no. or Email-id ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1591211720858",
+      "conditions": "@location_house",
+      "dialog_node": "node_4_1591211900074"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry, At which floor ?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_2_1591211799029",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1591211799054",
+      "previous_sibling": "handler_8_1591211799054"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1591211799029",
+      "context": {
+        "floor": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_8_1591211799054"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "I didn't get it ?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_9_1591213701035",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1591213701056",
+      "previous_sibling": "handler_3_1591213701056"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1591213701035",
+      "context": {
+        "location_house": "@location_house"
+      },
+      "conditions": "@location_house",
+      "event_name": "input",
+      "dialog_node": "handler_3_1591213701056"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry , I didn't understand."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_3_1591215036445",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1591215036466",
+      "previous_sibling": "handler_8_1591215036466"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1591215036445",
+      "context": {
+        "bhk": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_8_1591215036466"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry, What's your budget ?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_6_1591211378413",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1591211378428",
+      "previous_sibling": "handler_7_1591211378428"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1591211378413",
+      "context": {
+        "budget": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_7_1591211378428"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Can you give us your Phone no. or Email-id ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1591214145308",
+      "conditions": "@location_house",
+      "dialog_node": "node_5_1591214146650",
+      "previous_sibling": "slot_8_1591214405211"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1591214145308",
+      "variable": "$floor",
+      "dialog_node": "slot_8_1591214405211"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            ""
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1590956009801",
+      "disabled": true,
+      "dialog_node": "response_2_1591141497766",
+      "previous_sibling": "node_6_1591211353227"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many BHK do you want ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1590956009801",
+      "conditions": "@sys-number",
+      "dialog_node": "node_6_1591211353227"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "At which floor your flat is ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1591214759791",
+      "conditions": "@sys-number",
+      "dialog_node": "node_9_1591214760820",
+      "previous_sibling": "slot_8_1591215134724"
+    },
+    {
+      "type": "slot",
+      "parent": "node_3_1591214759791",
+      "variable": "$budget",
+      "dialog_node": "slot_8_1591215134724"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Can you give us your Phone no. or Email-id ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1591214761862",
+      "conditions": "@location_house",
+      "dialog_node": "node_5_1591214762951",
+      "previous_sibling": "slot_9_1591214961226"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1591214761862",
+      "variable": "$floor",
+      "dialog_node": "slot_9_1591214961226"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry, I didn't get it."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_8_1591214886789",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1591214886812",
+      "previous_sibling": "handler_6_1591214886812"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1591214886789",
+      "context": {
+        "location_house": "@location_house"
+      },
+      "conditions": "@location_house",
+      "event_name": "input",
+      "dialog_node": "handler_6_1591214886812"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry, At which floor ?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_9_1591214961226",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1591214961262",
+      "previous_sibling": "handler_5_1591214961262"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1591214961226",
+      "context": {
+        "floor": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_5_1591214961262"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please provide correct details ."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_1_1591212279409",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1591212279422",
+      "previous_sibling": "handler_6_1591212279422"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1591212279409",
+      "context": {
+        "contact": "@contact"
+      },
+      "conditions": "@contact",
+      "event_name": "input",
+      "dialog_node": "handler_6_1591212279422"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please provide valid details ."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_3_1591213815424",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1591213815455",
+      "previous_sibling": "handler_4_1591213815455"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1591213815424",
+      "context": {
+        "contact": "@contact"
+      },
+      "conditions": "@contact",
+      "event_name": "input",
+      "dialog_node": "handler_4_1591213815455"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you, we will contact you soon."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1591213670354",
+      "conditions": "@contact",
+      "dialog_node": "node_1_1591213672256",
+      "previous_sibling": "slot_9_1591213701035"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1591213670354",
+      "variable": "$location_house",
+      "dialog_node": "slot_9_1591213701035"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1591211546531",
+      "variable": "$bhk",
+      "dialog_node": "slot_6_1591211577121",
+      "previous_sibling": "node_9_1591211720858"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Where do you like to have your house ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1591211546531",
+      "conditions": "@floor",
+      "dialog_node": "node_9_1591211720858"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry I didn't understand ."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_6_1591212067185",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1591212067211",
+      "previous_sibling": "handler_2_1591212067211"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1591212067185",
+      "context": {
+        "location_house": "@location_house"
+      },
+      "conditions": "@location_house",
+      "event_name": "input",
+      "dialog_node": "handler_2_1591212067211"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Can you tell where your house is ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1591214143185",
+      "conditions": "@floor",
+      "dialog_node": "node_2_1591214145308",
+      "previous_sibling": "slot_6_1591214292757"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1591214143185",
+      "variable": "$bhk",
+      "dialog_node": "slot_6_1591214292757"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please provide valid details ."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_10_1591214784189",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1591214784199",
+      "previous_sibling": "handler_4_1591214784199"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1591214784189",
+      "context": {
+        "contact": "@contact"
+      },
+      "conditions": "@contact",
+      "event_name": "input",
+      "dialog_node": "handler_4_1591214784199"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry, I didn't understand ."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_4_1591213270335",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1591213270353",
+      "previous_sibling": "handler_7_1591213270353"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1591213270335",
+      "context": {
+        "bhk": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_7_1591213270353"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry, What's your budget ?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_4_1591213130408",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1591213130435",
+      "previous_sibling": "handler_4_1591213130435"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1591213130408",
+      "context": {
+        "budget": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_4_1591213130435"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Where would you like to have your house ? "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1591213090806",
+      "conditions": "@floor",
+      "dialog_node": "node_5_1591213094903",
+      "previous_sibling": "slot_4_1591213270335"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1591213090806",
+      "variable": "$bhk",
+      "dialog_node": "slot_4_1591213270335"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1591211900074",
+      "variable": "$location_house",
+      "dialog_node": "slot_6_1591212067185",
+      "previous_sibling": "node_1_1591212254519"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thanks we will contact you soon."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1591211900074",
+      "conditions": "@contact",
+      "dialog_node": "node_1_1591212254519"
+    },
+    {
+      "type": "standard",
+      "title": "Location_office",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Address : Shop No. 86/ D,Lokhandawala Complex, Andheri West, Mumbai, Maharashtra 400053\nContact  : 93858389/98373920"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#location_office",
+      "dialog_node": "node_3_1591136396173",
+      "previous_sibling": "node_8_1591135218152"
+    },
+    {
+      "type": "frame",
+      "title": "buy",
+      "output": {
+        "text": {
+          "values": [
+            "what's your budget ."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#buy",
+      "dialog_node": "node_2_1590956009801",
+      "previous_sibling": "node_6_1591906602574"
+    },
+    {
+      "type": "standard",
+      "title": "At_rent",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "At what cost you want to give it ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#At_rent",
+      "dialog_node": "node_8_1591135218152",
+      "previous_sibling": "node_6_1591134650586"
+    },
+    {
+      "type": "standard",
+      "title": "sell",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "At what cost do you want to sell ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#sell",
+      "dialog_node": "node_6_1591134650586",
+      "previous_sibling": "node_3_1590964175870"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_7_1591136785624",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Working_hour",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We are open 10 AM - 8 PM ,except Monday and public holidays ."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Working_hour",
+      "dialog_node": "node_7_1591136785624",
+      "previous_sibling": "node_3_1591136396173"
+    },
+    {
+      "type": "standard",
+      "title": "greeting",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello,I am REA ,how can I help you."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Greeting",
+      "dialog_node": "node_10_1590961915578",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "frame",
+      "title": "rent",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What's your budget ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#rent",
+      "dialog_node": "node_3_1590964175870",
+      "previous_sibling": "node_2_1590956009801"
+    },
+    {
+      "type": "standard",
+      "title": "Faq",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "input": "<?input_text?>"
+          },
+          "result_variable": "webhook_result_1"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#reg_faq",
+      "dialog_node": "node_6_1591906602574",
+      "previous_sibling": "node_10_1590961915578"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
